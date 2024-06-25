@@ -11,7 +11,7 @@ public class TVUser {
 //		tv.soundOff();
 //		tv.turnOff() ;
 
-//		Tv tv = new SamsungTv() ;
+//		Tv tv = new SamsungTv() ;		// 강한결합 - 유지보수가 어려움
 		
 		SamsungTv tv = new SamsungTv();
 		tv.powerOn() ;

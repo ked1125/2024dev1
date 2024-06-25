@@ -1,6 +1,9 @@
 package javaSample;
 
 public class SamsungTv {
+	
+//	public SamsungTv() 				// 추상메소드 - {중괄호-실행부}가 없는 메소드
+	
 	public SamsungTv() {
 		System.out.println("sm Tv 생성");
 	}

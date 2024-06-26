@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.study.spring.dao.IMyBbsDao">
+		<select id="listDao" resultType="com.study.spring.dto.MyBbsDto">		
+			<!-- IMyBbsDao.java파일의 IMyBbsDao() 의 타입인 MyBbsDto -->
+			select * 
+			from mybbs1 
+			order by id desc
+			<!-- 여기선 ;(세미콜론) 안쓰입니당-->
+		</select>
+		<select id="viewDao" resultType="com.study.spring.dto.MyBbsDto">		
+			<!-- IMyBbsDao.java파일의 IMyBbsDao() 의 타입인 MyBbsDto -->
+			select * 
+			from mybbs1 
+			where id = #{0}
+			<!-- #{0}을 쓰면 받을 인자값을 쏙 넣는다고 하심...?-->
+		</select>
+		<insert id="writeDao">		
+			insert into mybbs1(writer,title,content) 
+			values (#{param1},#{param2},#{param3})
+			<!-- #{0}을 쓰면 받을 인자값을 쏙 넣는다고 하심...?-->
+		</insert>
+		<delete id="deleteDao">		
+			delete from mybbs1 
+			where id = #{_id}
+			<!-- #{0}을 쓰면 받을 인자값을 쏙 넣는다고 하심...?-->
+			<!-- #{0}으로 쓰지 않고 직접적으로 쓰고 싶을땐 이렇게 쓰면 되는데, IMyBbsDao.java파일에서도 파람스값 수정해줘야함-->
+		</delete>
+	</mapper>

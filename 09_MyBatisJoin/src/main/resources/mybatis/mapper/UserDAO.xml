@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    <mapper namespace="com.study.spring.jdbc.IDAO">
+        <select id="getOrder" resultType="com.study.spring.jdbc.UserDTO">
+        SELECT o.id as ono1 ,c.name as cname1,c.job as cjob1 FROM orders o join customers c on o.customer_id =c.id
+        </select>
+    </mapper>

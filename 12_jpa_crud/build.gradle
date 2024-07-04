@@ -1,3 +1,4 @@
+ls
 plugins {
 	id 'java'
 	id 'war'
@@ -25,10 +26,10 @@ repositories {
 }
 
 
-eclipse.wtp.facet {
-    // Change the version of the Dynamic Web Module facet
-    facet name: 'jst.web', version: '5.0'
-}
+//eclipse.wtp.facet {
+//   // Change the version of the Dynamic Web Module facet
+//    facet name: 'jst.web', version: '5.0'
+//}
 
 
 

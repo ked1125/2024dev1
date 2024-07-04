@@ -1,0 +1,17 @@
+name: Deploy Ec2
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ssh ec2 로그인
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.PASSWORD }}
+        script: whoami
